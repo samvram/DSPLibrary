@@ -6,3 +6,8 @@ dtk = DspToolKit()
 time = dtk.array_creator(-5,5,1)
 func = disc.heaviside(time)
 dtk.plot(func)
+
+func = disc.impulse(time, -2)
+dtk.plot(func)
+
+dtk.show()
