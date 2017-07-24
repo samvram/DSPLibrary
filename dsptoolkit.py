@@ -47,3 +47,37 @@ class DspToolKit:
 
     def show(self):
         plt.show()
+
+    def real_add(self, fn1, fn2, key='add'):
+        time_1 = list(fn1.keys())
+        time_2 = list(fn2.keys())
+
+        if time_1 != time_2:
+            print('The Time Domain is not the same for both the function')
+            return
+
+        fn_add = {}
+        for time in time_1:
+            if key == 'sub':
+                fn_add[time] = fn1[time] - fn2[time]
+            else:
+                fn_add[time] = fn1[time] + fn2[time]
+
+        return fn_add
+
+    def dot_multiply(self, fn1, fn2, key='mul'):
+        time_1 = list(fn1.keys())
+        time_2 = list(fn2.keys())
+
+        if time_1 != time_2:
+            print('The Time Domain is not the same for both the function')
+            return
+
+        fn_dot = {}
+        for time in time_1:
+            if key == 'div':
+                fn_dot[time] = fn1[time]/fn2[time]
+            else:
+                fn_dot[time] = fn1[time]*fn2[time]
+
+        return fn_dot
