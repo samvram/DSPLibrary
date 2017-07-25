@@ -1,11 +1,11 @@
 # Using DSPLibrary
-DSPLibrary is a custom pythonlibrary created for tackling
+DSPLibrary is a custom python library created for tackling
 practical problems faced in DSP courses for Engineering. We 
 build this library for usage and development by students of **IIST**
 for **AV311(Digital Signal Processing)**. The library is made for
 **python**, for its open source usage. Yes, we promote *FOSS*.
 
-##Setting up the environment
+## Setting up the environment
 You need to have a working Python version installed on your system, along with 
 *Numpy* and *Scipy* libraries installed. We will walk through the steps to install
 this build on your system.
