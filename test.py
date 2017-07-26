@@ -3,7 +3,7 @@ from dsptoolkit import DspToolKit
 
 disc = DiscreteSignals()
 dtk = DspToolKit()
-time = dtk.array_creator(-5,5,1)
+time = dtk.array_creator(-5,5,0.5)
 func = disc.heaviside(time)
 dtk.plot(func)
 
