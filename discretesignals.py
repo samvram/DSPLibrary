@@ -8,7 +8,6 @@ class DiscreteSignals:
                 fn[time] = 0
             else:
                 fn[time] = scale
-            print(fn[time])
         return fn
 
     def ramp(self, time_array, begin_at=0, scale=1):
