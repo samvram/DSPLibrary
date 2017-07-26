@@ -88,3 +88,10 @@ class DspToolKit:
         for t in time:
             new_func[-1*t] = func[t]
         return new_func
+
+    def dtft(self,func):
+        '''
+        A function to find dtft of supplied function and return its dtft of the supplied function.
+        :param func:
+        :return:
+        '''
