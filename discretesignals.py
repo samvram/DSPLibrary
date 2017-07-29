@@ -4,7 +4,7 @@ class DiscreteSignals:
     def impulse(self, time_array, impulse_at=0, scale=1):
         fn = {}
         for time in time_array:
-            if time is not impulse_at:
+            if time != impulse_at:
                 fn[time] = 0
             else:
                 fn[time] = scale

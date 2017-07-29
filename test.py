@@ -4,6 +4,7 @@ import numpy as np
 
 disc = DiscreteSignals()
 dtk = DspToolKit()
+
 time = dtk.array_creator(-np.pi, np.pi, 0.01)
 func1 = np.sin(time)
 dtk.plot(func1)

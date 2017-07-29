@@ -81,3 +81,10 @@ class DspToolKit:
                 fn_dot[time] = fn1[time]*fn2[time]
 
         return fn_dot
+
+    def flip_about_y(self, func):
+        time = func.keys()
+        new_func = {}
+        for t in time:
+            new_func[-1*t] = func[t]
+        return new_func
