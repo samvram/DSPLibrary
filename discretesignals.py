@@ -36,3 +36,14 @@ class DiscreteSignals:
             fn_imaginary[time] = (r**n)*np.sin(theta*n)
         fn = {'real':fn_real, 'imaginary':fn_imaginary}
         return fn
+
+    def sinusoidal(self, time_array, phase=0, amplitude=1, omega=1):
+        '''
+        A function to return the function as in otther above function from the given input
+        :param time_array: The input sampled time_array
+        :param phase: The initial phase of the wave
+        :param amplitude: The amplitude of the wave
+        :param omega: The frequency of the wave
+        :return:
+        '''
+        # TODO: Write the function body please

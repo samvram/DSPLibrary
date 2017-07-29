@@ -1,16 +1,22 @@
 from discretesignals import DiscreteSignals
 from dsptoolkit import DspToolKit
+import numpy as np
 
 disc = DiscreteSignals()
 dtk = DspToolKit()
-time = dtk.array_creator(-5,5,0.5)
-func = disc.heaviside(time)
-dtk.plot(func)
 
-func_1 = dtk.flip_about_y(func)
-dtk.plot(func_1)
+time = dtk.array_creator(-np.pi, np.pi, 0.01)
+func1 = np.sin(time)
+dtk.plot(func1)
 
-func = disc.impulse(time, -2)
+func2 = np.sin(time)
+dtk.plot(func2)
+
+func = dtk.real_add(func1, func2)
 dtk.plot(func)
 
 dtk.show()
+ # TODO : Create a message signal as given in class
+ # TODO : Create a carrier signal as given in class
+ # TODO : Use the digitalCommunications class amplitude_modulation to get the modulated signa;
+ # TODO : Plot all the three waves
