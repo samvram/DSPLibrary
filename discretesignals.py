@@ -46,4 +46,8 @@ class DiscreteSignals:
         :param omega: The frequency of the wave
         :return:
         '''
-        # TODO: Write the function body please
+        fn = {}
+        for time in time_array:
+            fn[time] = amplitude*np.sin(omega*time+phase)
+
+        return fn

@@ -9,6 +9,6 @@ class DigitalCommunication:
 
         modulated_signal = {}
         for time in time_message:
-            modulated_signal[time] = message_signal[time]*carrier_signal[time]
+            modulated_signal[time] = message_signal[time] * carrier_signal[time]
 
         return modulated_signal

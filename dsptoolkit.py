@@ -13,35 +13,47 @@ class DspToolKit:
             time += step
         return fn
 
-    def plot(self, fn, figure_num=0):
+    def plot(self, fn, figure_num=0, title='Plot', mode='normal'):
         if figure_num is not 0:
             self.figure_num = figure_num
         for key in fn:
             if key in ['real', 'imaginary'] :
-                self._complex_plot(fn)
+                self._complex_plot(fn,mode)
                 return
-        self._normal_plot(fn)
+        self._normal_plot(fn, title, mode)
 
-    def _complex_plot(self, fn):
+    def _complex_plot(self, fn, mode):
         real_fn = fn['real']
         imaginary_fn = fn['imaginary']
 
         plt.figure(self.figure_num)
         plt.title('Real Plane')
-        plt.stem(list(real_fn.keys()), list(real_fn.values()))
+        if mode == 'stem':
+            plt.stem(list(real_fn.keys()), list(real_fn.values()))
+        else:
+            plt.plot(list(real_fn.keys()), list(real_fn.values()))
         # plt.show()
         self.figure_num = self.figure_num + 1
 
         plt.figure(self.figure_num)
         plt.title('Complex Plane')
-        plt.stem(list(imaginary_fn.keys()), list(imaginary_fn.values()))
+        if mode == 'stem':
+            plt.stem(list(imaginary_fn.keys()), list(imaginary_fn.values()))
+        else:
+            plt.plot(list(real_fn.keys()), list(real_fn.values()))
         # plt.show()
         self.figure_num = self.figure_num + 1
 
-    def _normal_plot(self, fn):
+    def _normal_plot(self, fn, title, mode):
         plt.figure(self.figure_num)
-        plt.title('Normal Plot')
-        plt.stem(list(fn.keys()), list(fn.values()))
+        if title == 'Plot':
+            plt.title('Normal Plot {}'.format(self.figure_num+1))
+        else:
+            plt.title(title)
+        if mode == 'stem':
+            plt.stem(list(fn.keys()), list(fn.values()))
+        else:
+            plt.plot(list(fn.keys()), list(fn.values()))
         # plt.show()
         self.figure_num = self.figure_num + 1
 
