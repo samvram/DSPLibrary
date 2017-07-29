@@ -16,3 +16,7 @@ func = dtk.real_add(func1, func2)
 dtk.plot(func)
 
 dtk.show()
+ # TODO : Create a message signal as given in class
+ # TODO : Create a carrier signal as given in class
+ # TODO : Use the digitalCommunications class amplitude_modulation to get the modulated signa;
+ # TODO : Plot all the three waves
