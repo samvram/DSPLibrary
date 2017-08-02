@@ -1,5 +1,5 @@
 class DigitalCommunication:
-    def amplitude_modulation(self, message_signal, carrier_signal):
+    def dsb_sc(self, message_signal, carrier_signal):
         time_message = list(message_signal.keys())
         time_carrier = list(carrier_signal.keys())
 
