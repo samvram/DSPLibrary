@@ -14,7 +14,7 @@ dtk.plot(message, title='Message Signal', mode='stem')
 carrier = disc.sinusoidal(time, omega=10)
 dtk.plot(carrier, title='Carrier Signal', mode='stem')
 
-func = dc.amplitude_modulation(message, carrier)
+func = dc.dsb_sc(message, carrier)
 dtk.plot(func, title='Amplitude Modulated signal', mode='stem')
 
 dtk.show()
